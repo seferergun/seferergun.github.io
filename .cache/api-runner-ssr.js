@@ -3,7 +3,7 @@ var plugins = [{
       options: {"plugins":[]},
     },{
       plugin: require('/Users/seferergun/projects/sregnn.github.io/node_modules/gatsby-plugin-google-analytics/gatsby-ssr'),
-      options: {"plugins":[],"trackingId":"UA-126126972-1"},
+      options: {"plugins":[],"trackingId":"UA-149004023-1"},
     }]
 // During bootstrap, we write requires at top of this file which looks like:
 // var plugins = [
