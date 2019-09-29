@@ -22,5 +22,12 @@ module.exports = {
                 includePaths: [__dirname],
             },
         },
+        "gatsby-plugin-react-helmet",
+        {
+            resolve: `gatsby-plugin-google-analytics`,
+            options: {
+                trackingId: "UA-126126972-1",
+            },
+        }
     ],
 }

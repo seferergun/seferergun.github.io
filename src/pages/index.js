@@ -3,7 +3,7 @@ import 'scss/style.scss';
 import Particles from 'react-particles-js';
 import {Fade, Flip, Slide, Zoom} from "react-reveal";
 import {Link} from 'react-scroll';
-
+import { Helmet } from "react-helmet";
 const particleParams = {
     "particles": {
         "number": {
@@ -233,6 +233,13 @@ const Index = () => {
 
     return (
         <div className="main-content">
+            <Helmet>
+                <meta charSet="utf-8"/>
+                <title>Sefer Ergün's Website</title>
+                <meta name="description" content="Sefer Ergün's Personal Website"/>
+                <meta name="keywords" content="Sefer,Ergün,JavaScript,Developer,Web,Software,Engineer,Nodejs"/>
+                <meta name="author" content="Sefer Ergün"/>
+            </Helmet>
             <Particles params={particleParams} className="particles-container"/>
 
 
@@ -399,7 +406,8 @@ const Index = () => {
                     })
                 }
             </section>
-        </div>);
+        </div>
+    );
 };
 
 export default Index;
