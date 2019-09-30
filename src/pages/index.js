@@ -4,6 +4,13 @@ import Particles from 'react-particles-js';
 import {Fade, Flip, Slide, Zoom} from "react-reveal";
 import {Link} from 'react-scroll';
 import { Helmet } from "react-helmet";
+
+import profilePhoto from '../images/profile.jpg';
+import frontendImage from '../images/front.png';
+import backendImage from '../images/backend.png';
+import mobileImage from '../images/mobile.png';
+import generalImage from '../images/general.png';
+
 const particleParams = {
     "particles": {
         "number": {
@@ -161,22 +168,22 @@ const Index = () => {
     const skills = [
         {
             title: 'Frontend Web Development',
-            imageSrc: '/images/front.png',
+            imageSrc: frontendImage,
             skills: ['Angular', 'React', 'Vue', 'JQuery', 'HTML5', 'CSS3'],
         },
         {
             title: 'Backend Web Development',
-            imageSrc: '/images/backend.png',
+            imageSrc: backendImage,
             skills: ['NodeJs', 'ExpressJs', 'Python', 'Django', 'PHP', 'Laravel'],
         },
         {
             title: 'Mobile Development',
-            imageSrc: '/images/mobile.png',
+            imageSrc: mobileImage,
             skills: ['Native iOS development with Swift', 'Native Android development with Java', 'IONIC', 'React Native'],
         },
         {
             title: 'General Development',
-            imageSrc: '/images/general.png',
+            imageSrc: generalImage,
             skills: ['C and C++', 'Qt Framework', 'Low level programming', 'OpenGL graphics development', 'Game development'],
         },
     ];
@@ -240,7 +247,7 @@ const Index = () => {
                 <meta name="keywords" content="Sefer,Ergün,JavaScript,Developer,Web,Software,Engineer,Nodejs"/>
                 <meta name="author" content="Sefer Ergün"/>
             </Helmet>
-            <Particles params={particleParams} className="particles-container"/>
+            {/*<Particles params={particleParams} className="particles-container"/>*/}
 
 
             <Fade top when={showNavbar}>
@@ -331,7 +338,7 @@ const Index = () => {
                 <div className="flex-d-row flex-center">
                     <div className="flex-100 flex-md-50 text-center">
                         <Zoom>
-                            <img src="profile.jpg" alt=""
+                            <img src={profilePhoto} alt=""
                                  className="profile-photo"/>
                         </Zoom>
                     </div>
