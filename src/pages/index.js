@@ -3,7 +3,7 @@ import 'scss/style.scss';
 import Particles from 'react-particles-js';
 import {Fade, Flip, Slide, Zoom} from "react-reveal";
 import {Link} from 'react-scroll';
-import { Helmet } from "react-helmet";
+import {Helmet} from "react-helmet";
 
 import profilePhoto from '../images/profile.jpg';
 import frontendImage from '../images/front.png';
@@ -191,20 +191,22 @@ const Index = () => {
         {
             title: 'Full Stack Web Developer - TEKBAS Group',
             date: 'JULY 2018 - PRESENT',
-            info: (<p className="experience-job-info">Developed internal automation tool that allows all departments to
-                work closely in sales
-                management with thousands of records per day with over 120 active users using Django and
-                Vue.js.
-                Developed multiple microservices using Node.js to allow communication with external web
-                services.</p>)
+            info: (<p className="experience-job-info">Developed internal automation tool for interconnecting multiple
+                departments of the company using
+                Django/Python and Vue.JS
+                Implemented multiple features to old automation tools using PHP/Laravel.
+                Worked on micro services that uses MEAN stack.
+                Developed internal mobile applications using IONIC.</p>)
         },
         {
             title: 'Full Stack Web Developer and Mobile Developer - SAIL Tech',
             date: 'JUNE 2017 - JUNE 2018',
-            info: <p className="experience-job-info">Developed native Android and iOS application of a vehicle
-                tracking system that has hundreds of active users.
-                Improved performance of the main backend server and improved responsiveness of the website of
-                the tracking system. Created a mobile application of an e-commerce platform using IONIC</p>
+            info: <p className="experience-job-info">Developed native Android and iOS application of a vehicle tracking
+                system that has hundreds of
+                active users. Improved performance of the main backend server and improved responsiveness of the website
+                of the tracking system using PHP/Laravel.
+                Worked on porting front-end code to Angular.
+                Created a mobile application of an e-commerce platform using IONIC.</p>
         },
         {
             title: 'Mobile Developer Internship - AKBIM',
@@ -246,6 +248,8 @@ const Index = () => {
                 <meta name="description" content="Sefer Ergün's Personal Website"/>
                 <meta name="keywords" content="Sefer,Ergün,JavaScript,Developer,Web,Software,Engineer,Nodejs"/>
                 <meta name="author" content="Sefer Ergün"/>
+                <link rel="stylesheet"
+                      href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css"/>
             </Helmet>
             {/*<Particles params={particleParams} className="particles-container"/>*/}
 
@@ -302,19 +306,19 @@ const Index = () => {
                         <div>
                             <a href="https://www.linkedin.com/in/sefer-ergun/" target="_blank"
                                className="initial-header-link"><i
-                                className="la la-envelope"/></a>
+                                className="fa fa-envelope"/></a>
                             <a href="https://www.linkedin.com/in/sefer-ergun/" target="_blank"
                                className="initial-header-link"><i
-                                className="la la-linkedin"/></a>
+                                className="fa fa-linkedin"/></a>
                             <a href="https://github.com/sregnn" target="_blank" className="initial-header-link"><i
-                                className="la la-github"/></a>
+                                className="fa fa-github"/></a>
                         </div>
                     </Zoom>
 
                     <div>
                         <Flip top>
                             <Link to="aboutMe" smooth={true} duration={500} className="about-me">
-                                About Me <i className="la la-arrow-down"/>
+                                About Me <i className="fa fa-arrow-down"/>
                             </Link>
                         </Flip>
                     </div>
