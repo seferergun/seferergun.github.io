@@ -304,7 +304,7 @@ const Index = () => {
                     </h3>
                     <Zoom cascade>
                         <div>
-                            <a href="https://www.linkedin.com/in/sefer-ergun/" target="_blank"
+                            <a href="mailto:sefer.ergun@outlook.com" target="_blank"
                                className="initial-header-link"><i
                                 className="fa fa-envelope"/></a>
                             <a href="https://www.linkedin.com/in/sefer-ergun/" target="_blank"
