@@ -310,7 +310,7 @@ const Index = () => {
                             <a href="https://www.linkedin.com/in/sefer-ergun/" target="_blank"
                                className="initial-header-link"><i
                                 className="fa fa-linkedin"/></a>
-                            <a href="https://github.com/sregnn" target="_blank" className="initial-header-link"><i
+                            <a href="https://github.com/seferergun" target="_blank" className="initial-header-link"><i
                                 className="fa fa-github"/></a>
                         </div>
                     </Zoom>
