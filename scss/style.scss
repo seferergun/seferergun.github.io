@@ -46,9 +46,18 @@ body {
 }
 
 
-@keyframes initialTextSlide {
+@keyframes initialTextSlideLeft {
   from {
     transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes initialTextSlideRight {
+  from {
+    transform: translateX(-100%);
   }
   to {
     transform: translateX(0);
@@ -99,7 +108,7 @@ $breakpoint-xl: 1200px;
     text-align: center;
     font-size: 36pt;
     transform-origin: center;
-    animation-name: initialTextSlide;
+    animation-name: initialTextSlideLeft;
     animation-duration: 1s;
     animation-fill-mode: both;
 
@@ -141,6 +150,12 @@ $breakpoint-xl: 1200px;
 
     & span {
       font-size: 12pt;
+    }
+
+    &-container {
+      animation-name: initialTextSlideRight;
+      animation-duration: 1s;
+      animation-fill-mode: both;
     }
 
   }

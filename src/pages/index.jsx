@@ -304,8 +304,7 @@ const Index = () => {
                     </h3>
                     </div>
                     <div className="col-md-6 col-12 overflow-hidden">
-                       <Slide cascade left duration={400}>
-                            <div className="d-flex flex-column justify-content-center">
+                            <div className="d-flex flex-column justify-content-center initial-header-link-container">
                                 <a href="mailto:sefer@seferergun.com" target="_blank"
                                    className="initial-header-link"><i className="fa fa-envelope"/> <span>sefer@seferergun.com</span></a>
                                 <a href="https://www.linkedin.com/in/sefer-ergun/" target="_blank"
@@ -314,7 +313,6 @@ const Index = () => {
                                 <a href="https://github.com/seferergun" target="_blank" className="initial-header-link"><i
                                     className="fa fa-github"/><span>https://github.com/seferergun</span></a>
                             </div>
-                        </Slide>
                     </div>
                     <div className="col-12 text-center mt-5">
                         <Flip top>
