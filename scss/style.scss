@@ -1,3 +1,5 @@
+@import "~bootstrap/scss/bootstrap-grid";
+
 $main_green: #00796B;
 $highlight_red: #E31C6D;
 $dark: #343a40;
@@ -24,13 +26,13 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
-  background-color: black !important;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  background-color: #ededed !important;
   overflow-y: auto;
   -webkit-overflow-scrolling: touch;
   font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.5;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 
@@ -40,6 +42,16 @@ body {
   }
   to {
     transform: scaleX(1);
+  }
+}
+
+
+@keyframes initialTextSlide {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
   }
 }
 
@@ -54,16 +66,16 @@ $breakpoint-xl: 1200px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
-  color: white;
-  @media (min-width: 576px) {
+  color: black;
+  @media (min-width: $breakpoint-sm) {
     max-width: 540px;
   }
 
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-md) {
     max-width: 720px;
   }
 
-  @media (min-width: 992px) {
+  @media (min-width: $breakpoint-lg) {
     max-width: 960px;
   }
 
@@ -73,21 +85,21 @@ $breakpoint-xl: 1200px;
 }
 
 
+.shadow-lg {
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
+}
+
 .initial-header {
   height: 100vh;
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  color: black;
+
 
   &-text {
     opacity: 0.9;
     text-align: center;
     font-size: 36pt;
-    margin-bottom: 2px;
     transform-origin: center;
-    animation-name: initialTextScale;
+    animation-name: initialTextSlide;
     animation-duration: 1s;
     animation-fill-mode: both;
 
@@ -95,15 +107,31 @@ $breakpoint-xl: 1200px;
       color: $highlight_red;
       text-decoration: underline;
     }
+
+    &-container {
+      @media (min-width: $breakpoint-md) {
+        border-right: 2px solid black;
+      }
+
+      overflow: hidden;
+    }
   }
+
 
   &-link {
     font-size: 30pt;
-    color: white;
+    color: black;
     transition: .2s;
-    display: inline-block;
     margin: 0 4px;
     text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @media (min-width: $breakpoint-lg) {
+      max-width: 960px;
+      justify-content: start;
+    }
 
     &:hover {
       text-decoration: none;
@@ -111,15 +139,19 @@ $breakpoint-xl: 1200px;
       transform: scale(1.2, 1.2);
     }
 
+    & span {
+      font-size: 12pt;
+    }
+
   }
 
   & .about-me {
     margin-top: 4px;
-    background-color: transparent;
-    color: aqua;
+    background-color: black;
+    color: white;
     font-size: 24pt;
     text-decoration: none;
-    border: aqua solid 1px;
+    border: black solid 3px;
     padding: 2px 8px;
     display: inline-block;
     cursor: pointer;
@@ -238,7 +270,7 @@ $breakpoint-xl: 1200px;
 }
 
 .header-title {
-  color: white;
+  color: black;
   font-size: 32pt;
   font-weight: bold;
   padding: 20px 0;
@@ -246,7 +278,7 @@ $breakpoint-xl: 1200px;
 }
 
 .header-subtitle {
-  color: white;
+  color: black;
   font-size: 18pt;
   font-weight: bold;
   text-align: center;
@@ -255,7 +287,7 @@ $breakpoint-xl: 1200px;
 .header-bar {
   width: 80px;
   height: 4px;
-  background-color: white;
+  background-color: black;
   margin: 20px auto 100px auto;
 }
 
@@ -298,7 +330,7 @@ $breakpoint-xl: 1200px;
 }
 
 .navbar {
-  background-color: $dark;
+  background-color: white;
   height: auto;
   position: fixed;
   top: 0;
@@ -333,7 +365,7 @@ $breakpoint-xl: 1200px;
         display: block;
         padding: .5rem 0;
 
-        color: white;
+        color: black;
         opacity: 0.8;
         text-decoration: none;
 
@@ -342,7 +374,7 @@ $breakpoint-xl: 1200px;
 
         &.active {
           opacity: 1;
-          color: aqua;
+          color: $highlight_red;
         }
 
         &:hover {
@@ -375,7 +407,7 @@ $breakpoint-xl: 1200px;
   }
 
   .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba(0, 0, 0, 0.5)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
   }
 
 }
@@ -434,4 +466,46 @@ section {
 }
 
 
+.btn {
+  position: relative;
+  display: inline-block;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .175) !important;
+  border-radius: 5px;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform: translateZ(0);
+}
 
+.btn::after {
+  content: "";
+  border-radius: 5px;
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 1rem 5rem rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  -webkit-transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  -webkit-backface-visibility: hidden;
+  -ms-transform: translateZ(0); /* IE 9 */
+  -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+  transform: translateZ(0);
+}
+
+.btn:hover {
+  -webkit-transform: scale(1, 1);
+  transform: translateY(-1px);
+}
+
+.btn:hover::after {
+  opacity: 1;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}

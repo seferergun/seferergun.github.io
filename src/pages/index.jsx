@@ -1,6 +1,5 @@
 import React from "react";
 import 'scss/style.scss';
-import Particles from 'react-particles-js';
 import {Fade, Flip, Slide, Zoom} from "react-reveal";
 import {Link} from 'react-scroll';
 import {Helmet} from "react-helmet";
@@ -10,6 +9,7 @@ import frontendImage from '../images/front.png';
 import backendImage from '../images/backend.png';
 import mobileImage from '../images/mobile.png';
 import generalImage from '../images/general.png';
+
 
 const particleParams = {
     "particles": {
@@ -241,7 +241,7 @@ const Index = () => {
 
 
     return (
-        <div className="main-content">
+        <div className="container">
             <Helmet>
                 <meta charSet="utf-8"/>
                 <title>Sefer Ergün's Website</title>
@@ -296,31 +296,32 @@ const Index = () => {
             </Fade>
 
             <section id="home">
-                <div className="initial-header">
-
-                    <h3 className="initial-header-text">
+                <div className="row align-items-center initial-header align-content-center">
+                    <div className="col-md-6 col-12 initial-header-text-container">
+                       <h3 className="initial-header-text">
                         Hi, I'm <span className="initial-header-text-name">Sefer Ergün</span> <br/>
                         I'm a full-stack web developer
                     </h3>
-                    <Zoom cascade>
-                        <div>
-                            <a href="mailto:sefer.ergun@outlook.com" target="_blank"
-                               className="initial-header-link"><i
-                                className="fa fa-envelope"/></a>
-                            <a href="https://www.linkedin.com/in/sefer-ergun/" target="_blank"
-                               className="initial-header-link"><i
-                                className="fa fa-linkedin"/></a>
-                            <a href="https://github.com/seferergun" target="_blank" className="initial-header-link"><i
-                                className="fa fa-github"/></a>
-                        </div>
-                    </Zoom>
-
-                    <div>
+                    </div>
+                    <div className="col-md-6 col-12 overflow-hidden">
+                       <Slide cascade left duration={400}>
+                            <div className="d-flex flex-column justify-content-center">
+                                <a href="mailto:sefer@seferergun.com" target="_blank"
+                                   className="initial-header-link"><i className="fa fa-envelope"/> <span>sefer@seferergun.com</span></a>
+                                <a href="https://www.linkedin.com/in/sefer-ergun/" target="_blank"
+                                   className="initial-header-link"><i
+                                    className="fa fa-linkedin"/><span>https://www.linkedin.com/in/sefer-ergun/</span></a>
+                                <a href="https://github.com/seferergun" target="_blank" className="initial-header-link"><i
+                                    className="fa fa-github"/><span>https://github.com/seferergun</span></a>
+                            </div>
+                        </Slide>
+                    </div>
+                    <div className="col-12 text-center mt-5">
                         <Flip top>
-                            <Link to="aboutMe" smooth={true} duration={500} className="about-me">
-                                About Me <i className="fa fa-arrow-down"/>
-                            </Link>
-                        </Flip>
+                                <Link to="aboutMe" smooth={true} duration={500} className="about-me btn">
+                                    About Me <i className="fa fa-arrow-down"/>
+                                </Link>
+                            </Flip>
                     </div>
                 </div>
             </section>
