@@ -317,7 +317,9 @@ const Index = () => {
                     </div>
                     <div className="flex-100 text-center m-t-5">
                                 <Link to="aboutMe" smooth={true} duration={500} className="about-me btn">
-                                    About Me <img src={arrowSolidDown} />
+                                    <span className="flex-d items-center">
+                                        About Me <img src={arrowSolidDown} />
+                                    </span>
                                 </Link>
                     </div>
                 </div>
