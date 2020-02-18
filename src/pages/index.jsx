@@ -4,11 +4,14 @@ import {Fade, Flip, Slide, Zoom} from "react-reveal";
 import {Link} from 'react-scroll';
 import {Helmet} from "react-helmet";
 
+import 'line-awesome/dist/font-awesome-line-awesome/css/all.min.css';
+
 import profilePhoto from '../images/profile.jpg';
 import frontendImage from '../images/front.png';
 import backendImage from '../images/backend.png';
 import mobileImage from '../images/mobile.png';
 import generalImage from '../images/general.png';
+
 
 
 const particleParams = {
@@ -241,15 +244,13 @@ const Index = () => {
 
 
     return (
-        <div className="container">
+        <div className="main-content">
             <Helmet>
                 <meta charSet="utf-8"/>
                 <title>Sefer Ergün's Website</title>
                 <meta name="description" content="Sefer Ergün's Personal Website"/>
                 <meta name="keywords" content="Sefer,Ergün,JavaScript,Developer,Web,Software,Engineer,Nodejs"/>
                 <meta name="author" content="Sefer Ergün"/>
-                <link rel="stylesheet"
-                      href="https://maxcdn.icons8.com/fonts/line-awesome/1.1/css/line-awesome-font-awesome.min.css"/>
             </Helmet>
             {/*<Particles params={particleParams} className="particles-container"/>*/}
 
@@ -296,30 +297,28 @@ const Index = () => {
             </Fade>
 
             <section id="home">
-                <div className="row align-items-center initial-header align-content-center">
-                    <div className="col-md-6 col-12 initial-header-text-container">
+                <div className="flex-d-row items-center initial-header content-center">
+                    <div className="flex-100 flex-md-50 initial-header-text-container">
                        <h3 className="initial-header-text">
                         Hi, I'm <span className="initial-header-text-name">Sefer Ergün</span> <br/>
                         I'm a full-stack web developer
                     </h3>
                     </div>
-                    <div className="col-md-6 col-12 overflow-hidden">
-                            <div className="d-flex flex-column justify-content-center initial-header-link-container">
+                    <div className="flex-md-50 flex-100 overflow-hidden">
+                            <div className="flex-column flex-column justify-content-center initial-header-link-container">
                                 <a href="mailto:sefer@seferergun.com" target="_blank"
                                    className="initial-header-link"><i className="fa fa-envelope"/> <span>sefer@seferergun.com</span></a>
                                 <a href="https://www.linkedin.com/in/sefer-ergun/" target="_blank"
                                    className="initial-header-link"><i
-                                    className="fa fa-linkedin"/><span>https://www.linkedin.com/in/sefer-ergun/</span></a>
+                                    className="fab fa-linkedin"/><span>https://www.linkedin.com/in/sefer-ergun/</span></a>
                                 <a href="https://github.com/seferergun" target="_blank" className="initial-header-link"><i
-                                    className="fa fa-github"/><span>https://github.com/seferergun</span></a>
+                                    className="fab fa-github"/><span>https://github.com/seferergun</span></a>
                             </div>
                     </div>
-                    <div className="col-12 text-center mt-5">
-                        <Flip top>
+                    <div className="flex-100 text-center m-t-5">
                                 <Link to="aboutMe" smooth={true} duration={500} className="about-me btn">
                                     About Me <i className="fa fa-arrow-down"/>
                                 </Link>
-                            </Flip>
                     </div>
                 </div>
             </section>

@@ -1,4 +1,4 @@
-@import "~bootstrap/scss/bootstrap-grid";
+
 
 $main_green: #00796B;
 $highlight_red: #E31C6D;
@@ -61,6 +61,16 @@ body {
   }
   to {
     transform: translateX(0);
+  }
+}
+
+
+@keyframes initialButtonFlip {
+  from {
+    transform: rotateX(90deg);
+  }
+  to {
+    transform: rotateX(0);
   }
 }
 
@@ -135,27 +145,34 @@ $breakpoint-xl: 1200px;
     text-decoration: none;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: start;
+
 
     @media (min-width: $breakpoint-lg) {
       max-width: 960px;
-      justify-content: start;
     }
 
     &:hover {
       text-decoration: none;
       color: $highlight_red;
-      transform: scale(1.2, 1.2);
+      transform: translateX(2px);
     }
 
     & span {
-      font-size: 12pt;
+      font-size: 11pt;
     }
 
     &-container {
       animation-name: initialTextSlideRight;
       animation-duration: 1s;
       animation-fill-mode: both;
+    }
+
+
+    img {
+      width: 32px;
+      height: 32px;
+      margin-right: 5px;
     }
 
   }
@@ -170,6 +187,9 @@ $breakpoint-xl: 1200px;
     padding: 2px 8px;
     display: inline-block;
     cursor: pointer;
+    animation-name: initialButtonFlip;
+    animation-duration: 1s;
+    animation-fill-mode: both;
   }
 
 
@@ -307,42 +327,10 @@ $breakpoint-xl: 1200px;
 }
 
 
-.flex-d-column {
-  display: flex;
-  flex-direction: column;
-  margin-right: -15px;
-  margin-left: -15px;
-
-}
-
-.flex-center {
-  justify-content: center;
-  align-items: center;
-}
-
-.flex-d-row {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
-}
-
 .text-center {
   text-align: center;
 }
 
-
-.flex-100 {
-  flex: 0 0 100%;
-  max-width: 100%;
-}
-
-.flex-100,
-.flex-md-50 {
-  padding-left: 15px;
-  padding-right: 15px;
-}
 
 .navbar {
   background-color: white;
@@ -383,6 +371,7 @@ $breakpoint-xl: 1200px;
         color: black;
         opacity: 0.8;
         text-decoration: none;
+        cursor: pointer;
 
 
         transition: color .30s ease-in-out, opacity .15s ease-in-out;
@@ -428,10 +417,7 @@ $breakpoint-xl: 1200px;
 }
 
 @media (min-width: $breakpoint-md) {
-  .flex-md-50 {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
+
 
   .navbar {
     height: 56px;
@@ -523,4 +509,64 @@ section {
 
 .overflow-hidden {
   overflow: hidden;
+}
+
+
+/* Layout */
+
+.flex-d-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.flex-d-column {
+  display: flex;
+  flex-direction: column;
+  margin-right: -15px;
+  margin-left: -15px;
+
+}
+
+.flex-center {
+  justify-content: center;
+  align-items: center;
+}
+
+.justify-left {
+  justify-content: left;
+}
+
+.content-center {
+  align-content: center;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.flex-100 {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+
+.flex-100,
+.flex-md-50 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+
+@media (min-width: $breakpoint-md) {
+  .flex-md-50 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+}
+
+
+.m-t-5 {
+  margin-top: 3rem;
 }
