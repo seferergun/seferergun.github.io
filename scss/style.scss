@@ -190,6 +190,11 @@ $breakpoint-xl: 1200px;
     animation-name: initialButtonFlip;
     animation-duration: 1s;
     animation-fill-mode: both;
+
+    img {
+      width: 32px;
+      height: 32px;
+    }
   }
 
 

@@ -12,7 +12,7 @@ import backendImage from '../images/backend.png';
 import mobileImage from '../images/mobile.png';
 import generalImage from '../images/general.png';
 
-
+import arrowSolidDown from '../svgs/arrow-solid-down.svg';
 
 const particleParams = {
     "particles": {
@@ -317,7 +317,7 @@ const Index = () => {
                     </div>
                     <div className="flex-100 text-center m-t-5">
                                 <Link to="aboutMe" smooth={true} duration={500} className="about-me btn">
-                                    About Me <i className="fa fa-arrow-down"/>
+                                    About Me <img src={arrowSolidDown} />
                                 </Link>
                     </div>
                 </div>
