@@ -1,7 +1,7 @@
 module.exports = [{
-      plugin: require('/home/sefere/Belgeler/projects/seferergun.github.io/node_modules/gatsby-plugin-google-analytics/gatsby-browser.js'),
-      options: {"plugins":[],"trackingId":"UA-151066190-1"},
+      plugin: require('../node_modules/gatsby-plugin-google-analytics/gatsby-browser.js'),
+      options: {"plugins":[],"trackingId":"UA-151066190-1","head":false,"anonymize":false,"respectDNT":false,"exclude":[],"pageTransitionDelay":0},
     },{
-      plugin: require('/home/sefere/Belgeler/projects/seferergun.github.io/gatsby-browser.js'),
+      plugin: require('../gatsby-browser.js'),
       options: {"plugins":[]},
     }]
